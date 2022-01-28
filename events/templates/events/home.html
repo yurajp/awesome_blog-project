@@ -35,19 +35,18 @@
     
   </head>
   <body>
-    
+{% load static %}   
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#c65325">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><h5>Awesome Blog</h5></a>
+    <a class="navbar-brand" href=""><h5>Awesome Blog</h5></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ml-auto">
+        <a class="nav-link" href="{% url 'showblog' %}">Blog</a>
         <a class="nav-link" href="#">About Me</a>
-        <a class="nav-link" href="#">Facebook</a>
-        <a class="nav-link" href="#">Blog</a>
         <a class="nav-link" href="#">Contacts</a>
       </div>
     </div>
@@ -63,8 +62,9 @@
         <h1 class="fw-normal display-4">HI THERE!!!</h1>
         <p class="lead text-muted">Nice to meet you on my personal blog page! I wish you'll not be boring.</p>
         <p>
-          <a href="mailto:metanol00@gmail.com" class="btn my-3" style="background:#c65325; color:white">Write me any time!</a>
+          <a href="mailto:metanol00@gmail.com" class="btn my-3" style="background:#d66031; color:white">Write me any time!</a>
         </p>
+        <img src="{% static 'img/title_news.jpg' %}" width=164rem />
       </div>
     </div>
   </section>
@@ -90,7 +90,7 @@
 <footer class="text-muted py-5">
   <div class="container">
     <p class="float-end mb-1">
-      <a href="#">Back to top</a>
+      <a style="text-decoration:none; color:firebrick;" href="#">Back to top</a>
     </p>
 </footer>
 
